@@ -15,8 +15,12 @@ if [ -x "$(command -v picom)" ]; then
   picom --config "$SCRIPTPATH/config/picom/picom.conf" &> /dev/null &
 fi
 
+if [ -x "$(command -v dunst)" ]; then
+    dunst -config "$SCRIPTPATH/config/dunst/dunstrc" &> /dev/null &
+fi
 
-# set the theme.toml config
+
+# set the theme.ron config
 leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 
 

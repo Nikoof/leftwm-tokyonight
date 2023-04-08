@@ -1,0 +1,142 @@
+[global]
+# General
+    monitor = 0
+    follow = mouse
+
+# Geometry
+    width = (0, 500)
+    height = (0, 300)
+    offset = 8x28 
+    origin = top-right 
+    scale = 0
+
+    notification_limit = 10
+    indicate_hidden = yes
+
+# Progress Bar
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+
+# Looks
+    transparency = 0 
+
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 10
+
+    frame_width = 3
+    frame_color = "#24283b"
+    separator_height = 2
+    separator_color = frame 
+    corner_radius = 0
+
+# Behaviour
+    show_age_threshold = 60
+    sort = no
+
+# Text 
+    markup = full
+    format = "<i>(%a)</i>\n<b>%s</b>\n%b"
+    font = "FiraCode Nerd Font Mono 12"
+
+    alignment = left
+    vertical_alignment = center
+
+    ellipsize = end
+    ignore_newline = no
+
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+# Icons
+    icon_position = left
+    min_icon_size = 0
+    max_icon_size = 92 
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+# History
+    sticky_history = yes
+    history_length = 20
+
+# Misc
+    dmenu = /usr/bin/dmenu -p dunst
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+
+[urgency_low]
+    background = "#1a1b26"
+    foreground = "#c0caf5"
+    timeout = 10
+    # default_icon = 
+
+[urgency_normal]
+    background = "#1a1b26"
+    foreground = "#c0caf5"
+    timeout = 10
+    # default_icon = 
+
+[urgency_critical]
+    background = "#1a1b26"
+    foreground = "#f7768e"
+    timeout = 10
+    # default_icon = 
+
+
+
+# Every section that isn't one of the above is interpreted as a rules to
+# override settings for certain messages.
+#
+# Messages can be matched by
+#    appname (discouraged, see desktop_entry)
+#    body
+#    category
+#    desktop_entry
+#    icon
+#    match_transient
+#    msg_urgency
+#    stack_tag
+#    summary
+#
+# and you can override the
+#    background
+#    foreground
+#    format
+#    frame_color
+#    fullscreen
+#    new_icon
+#    set_stack_tag
+#    set_transient
+#    set_category
+#    timeout
+#    urgency
+#    icon_position
+#    skip_display
+#    history_ignore
+#    action_name
+#    word_wrap
+#    ellipsize
+#    alignment
+#    hide_text
+#
+# Shell-like globbing will get expanded.
+#
+# Instead of the appname filter, it's recommended to use the desktop_entry filter.
+# GLib based applications export their desktop-entry name. In comparison to the appname,
+# the desktop-entry won't get localized.
+#
+# SCRIPTING
+# You can specify a script that gets run when the rule matches by
+# setting the "script" option.
+# The script will be called as follows:
+#   script appname summary body icon urgency
+# where urgency can be "LOW", "NORMAL" or "CRITICAL".
+#
+# NOTE: It might be helpful to run dunst -print in a terminal in order
+# to find fitting options for rules.
