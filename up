@@ -27,8 +27,8 @@ leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 # set background
 if [ -x "$(command -v feh)" ]; then
   feh --no-fehbg \
-      --bg-scale "$SCRIPTPATH/wallpapers/bg3.png" \
-      --bg-scale "$SCRIPTPATH/wallpapers/bg3.png"
+      --bg-scale "$SCRIPTPATH/wallpapers/alveolar.png" \
+      --bg-scale "$SCRIPTPATH/wallpapers/alveolar.png"
 fi
 
 index=0
