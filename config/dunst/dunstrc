@@ -6,7 +6,7 @@
 # Geometry
     width = (0, 500)
     height = (0, 300)
-    offset = 8x28 
+    offset = 8x33 
     origin = top-right 
     scale = 0
 
